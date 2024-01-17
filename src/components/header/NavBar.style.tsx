@@ -13,7 +13,7 @@ export const StyledHeader = styled("div")`
   color: white;
   margin: 0 0;
   // background: #faf2e4;
-  background: grey;
+  background: red;
 
   @media only screen and (max-width: 860px) {
     margin: 0 0vw;
