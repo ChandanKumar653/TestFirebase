@@ -1,0 +1,31 @@
+.searchBar {
+  margin-top: 16px;
+  width: 80%;
+  @media screen and (max-width: 860px) {
+    width: 92%;
+    margin-left: 0;
+  }
+}
+
+.viewAllClass {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  transition: 2s;
+  gap: 20px;
+  justify-content: center;
+  @media screen and (max-width: 860px) {
+    gap: 12px;
+  }
+}
+
+.aisSearchBoxform {
+  background-color: #fff;
+  display: flex;
+  font-size: 0.875rem;
+  height: 2.5rem;
+  line-height: 1.25rem;
+  position: relative;
+  width: 100%;
+  border-radius: 25px;
+}

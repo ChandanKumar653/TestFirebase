@@ -1,0 +1,134 @@
+.productWrap {
+  justify-content: center;
+  // padding: 0px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: row;
+  background-color: #f8f8f8;
+  // padding: 3rem 10rem;
+  @media screen and (max-width: "860px") {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .imageSection {
+    width: 52%;
+    padding: 0rem;
+    background-color: white;
+    // max-height: 15vh;
+    padding-top: 50px;
+    @media screen and (max-width: "860px") {
+      width: auto;
+      padding-top: 0px;
+    }
+  }
+
+  .contentSection {
+    width: 48%;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 40px;
+    background-color: white;
+    @media screen and (max-width: "860px") {
+      padding: 0 40px;
+      width: auto;
+    }
+  }
+}
+
+.productContentWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+  background-color: white;
+
+  .productName {
+    font-size: 20px;
+    color: #232b2b;
+    font-weight: bold;
+    @media screen and (max-width: "860px") {
+      font-size: 26px;
+      text-align: left;
+    }
+  }
+  .priceSection {
+    display: flex;
+    gap: 16px;
+    .discountedPrice {
+      color: red;
+      font-size: 16px;
+      font-weight: bold;
+      // font-style: oblique;
+      text-decoration: line-through;
+      @media screen and (max-width: "860px") {
+        font-size: 16px;
+        font-weight: bold;
+        // font-style: oblique;
+        text-decoration: line-through;
+      }
+    }
+    .actualprice {
+      color: #232b2b;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: oblique;
+      @media screen and (max-width: "860px") {
+        font-size: 16px;
+        font-weight: bold;
+        font-style: oblique;
+      }
+    }
+  }
+  .brand {
+    // background-color: yellow;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    .brandName {
+      width: 50%;
+      font-weight: bold;
+      vertical-align: auto;
+      margin: auto;
+    }
+    .brandImage {
+      width: 50%;
+      text-align: right;
+    }
+  }
+}
+
+.detailPageWrap {
+  @media screen and (max-width: "860px") {
+    padding: 0;
+  }
+}
+
+.downloadButtonWrap {
+  margin: auto;
+  @media screen and (max-width: "860px") {
+    height: 40px;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+  }
+
+  .buttonClass {
+    margin: auto 0;
+    border: 0.5px solid #d74c51;
+    color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    background-color: #d74c51;
+    padding: 12px 24px;
+    :hover {
+      box-shadow: 0 0 10px 100px #d74c51 inset;
+      color: #d74c51;
+    }
+    @media screen and (max-width: "860px") {
+      // margin: 0 -4rem;
+      margin-left: -40px;
+      width: 100%;
+    }
+  }
+}
