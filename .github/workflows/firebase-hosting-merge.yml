@@ -15,6 +15,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm ci --force && npm run build
+
+      # Add the following steps to troubleshoot the "Could not find the next executable" issue
+      - name: Add node_modules/.bin to PATH
+        run: export PATH="./node_modules/.bin:$PATH"
+
+      - name: Verify next executable
+        run: ./node_modules/.bin/next -v
+
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
@@ -23,6 +31,6 @@ jobs:
           projectId: findbetter-690a5
           # Other configuration options...
 
-        # Add the following lines to enable the "webframeworks" experiment
+        # Add the following line to enable the "webframeworks" experiment
         env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks
