@@ -23,9 +23,6 @@ jobs:
       - name: Verify next executable
         run: npx next -v
 
-      - name: Upgrade react-instantsearch-router-nextjs
-        run: npm install react-instantsearch-router-nextjs@latest
-
       - run: npm ci --force && npm run build
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
