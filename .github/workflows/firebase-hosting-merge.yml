@@ -14,14 +14,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      # Add the following steps for troubleshooting
+      - name: Check Node.js and npm versions
+        run: |
+          node -v
+          npm -v
+
+      - name: Update npm
+        run: npm install -g npm
+
+      - name: Print PATH
+        run: echo $PATH
+
       - run: npm ci --force && npm run build
-
-      # Add the following steps to troubleshoot the "Could not find the next executable" issue
-      - name: Add node_modules/.bin to PATH
-        run: export PATH="./node_modules/.bin:$PATH"
-
-      - name: Verify next executable
-        run: ./node_modules/.bin/next -v
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
