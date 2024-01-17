@@ -12,8 +12,8 @@ export const StyledHeader = styled("div")`
   // padding:0 8px;
   color: white;
   margin: 0 0;
-  // background: #faf2e4;
-  background: black;
+  background: #faf2e4;
+
   @media only screen and (max-width: 860px) {
     margin: 0 0vw;
     background: #303030;
