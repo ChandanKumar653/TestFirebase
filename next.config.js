@@ -5,7 +5,8 @@
 // module.exports = nextConfig
 
 const path = require("path");
-
+// get the authenticated Firebase App
+const firebaseApp = getApp(useRouter().query.__firebaseAppName);
 module.exports = {
   output: "export",
   sassOptions: {
